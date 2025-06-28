@@ -13,7 +13,7 @@
 
     - name: print veg names
       ansible.builtin.debug:
-        msg: veg name are - {{ iter["name"] }} , Qty - {{ iter.qty }}
+        msg: veg name are - {{ item["name"] }} , Qty - {{ item.qty }}
       loop:
         - { name: carrot, qty: 10}
         - { name: tomato, qty: 20}
