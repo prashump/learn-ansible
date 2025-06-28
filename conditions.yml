@@ -5,9 +5,9 @@
     - name: print veg name
       ansible.builtin.debug:
         msg: veg name  - carrot
-        when: veg == "yes"
+      when: veg == "yes"
 
     - name: print fruit name
       ansible.builtin.debug:
         msg: veg name  - banana
-        when: fruit == "yes"
+      when: fruit == "yes"
