@@ -49,3 +49,22 @@
     - name : print values
       ansible.builtin.debug:
         msg: x - {{ x }} , y - {{ y }} , z - {{ z }}
+
+# variable declaration types
+# Normal, List, Map
+
+- name : Variable types
+  hosts: localhost
+  connection: local
+  vars:
+    x: abc
+    y:
+      - 100
+      - 200
+    z:
+      url: sample
+      domain: example.com
+  tasks:
+    - name : print values
+      ansible.builtin.debug:
+        msg: x - {{ x }} , y - {{ y[0] }} , z - {{ z["url"] }}
