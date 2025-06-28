@@ -5,3 +5,16 @@
     - name: print facts
       ansible.builtin.debug:
         msg: "{{ ansible_default_ipv4.address }}"
+
+
+- name: Register
+  hosts: localhost
+  connection: local
+  tasks:
+    - name: print uptime
+      ansible.builtin.shell: uptime
+      register: out
+
+    - name: print output
+      ansible.builtin.debug:
+        msg: "{{ out }}"
