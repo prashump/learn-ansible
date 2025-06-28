@@ -74,3 +74,6 @@
 
 #msg: {{ URL }}  requires quotes
 #msg: url is - {{ URL }} does not require quotes
+
+# error handling : ignore_error: true
+# parallelism : in shell sleep 30
