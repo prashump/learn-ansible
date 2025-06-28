@@ -11,8 +11,19 @@
   hosts: localhost
   connection: local
   vars:
-    url: play.example.com
+    url: play.example.com  # all tasks can access this variable
   tasks:
     - name : print url
       ansible.builtin.debug:
         msg: url is  - {{ url }}
+
+
+- name: Task level variables
+  hosts: localhost
+  connection: local
+  tasks:
+    - name : print url
+      ansible.builtin.debug:
+        msg: url is  - {{ url }}
+      vars:
+        url: tasks.example.com  # task level variable
