@@ -1,0 +1,7 @@
+- name: loops example
+  hosts: localhost
+  connection: local
+  tasks:
+    - name: print veg name
+      ansible.builtin.debug:
+        msg: "{{ ansible_virtualization_type }}"
