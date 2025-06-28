@@ -1,0 +1,5 @@
+- name : Variable declaration types
+  hosts: localhost
+  connection: local
+  roles:
+    - Demo
