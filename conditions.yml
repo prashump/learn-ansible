@@ -20,4 +20,4 @@
     - name: print number
       ansible.builtin.debug:
         msg: "{{ x }} is greater then 0"
-      when: x | int > 0
+      when: x | int > 0  # | int make sure x is a number
