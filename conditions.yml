@@ -17,7 +17,7 @@
         msg: veg name  - carrot
       when: veg | bool
 
-    - name: print veg name1
+    - name: print number
       ansible.builtin.debug:
         msg: "{{ x }} is greater then 0"
       when: x | int > 0
