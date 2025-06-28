@@ -53,7 +53,7 @@
 # variable declaration types
 # Normal, List, Map
 
-- name : Variable types
+- name : Variable declaration types
   hosts: localhost
   connection: local
   vars:
