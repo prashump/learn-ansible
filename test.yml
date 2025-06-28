@@ -31,6 +31,7 @@
 
 #  commandline level
 #  Task level
+#  Roles level
 #  Play level
 #  inventory level
 #  Error if no variable declared
@@ -68,3 +69,8 @@
     - name : print values
       ansible.builtin.debug:
         msg: x - {{ x }} , y - {{ y[0] }} , z - {{ z["url"] }}
+
+
+
+#msg: {{ URL }}  requires quotes
+#msg: url is - {{ URL }} does not require quotes
