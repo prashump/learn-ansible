@@ -11,7 +11,7 @@
         - drumstick
         - bitter guard
 
-    - name: print veg name
+    - name: print veg names
       ansible.builtin.debug:
         msg: veg name are - {{ i["name"] }} , Qty - {{ i.qty }}
       loop:
