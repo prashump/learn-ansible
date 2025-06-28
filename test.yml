@@ -40,12 +40,12 @@
 
 - name : Variable types
   hosts: localhost
-  connection: : local
-    vars:
-      x: abc
-      y: 100
-      z: true
-    tasks:
-      - name : print values
-        ansible.builtin.debug:
-          msg: x - {{ x }} , y - {{ y }} , z - {{ z }}
+  connection: local
+  vars:
+    x: abc
+    y: 100
+    z: true
+  tasks:
+    - name : print values
+      ansible.builtin.debug:
+        msg: x - {{ x }} , y - {{ y }} , z - {{ z }}
