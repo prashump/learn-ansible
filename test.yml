@@ -5,3 +5,14 @@
       ansible.builtin.debug:
         msg: Hello I am in ansible world
 
+
+# variables
+- name: play level variables
+  hosts: localhost
+  connection: local
+  vars:
+    url: play.example.com
+  tasks:
+    - name : print url
+      ansible.builtin.debug:
+        msg: url is  - {{ url }}
