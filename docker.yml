@@ -1,3 +1,7 @@
+- name: conditions
+  hosts: localhost
+  connection: local
+
 - name: Restart a container
   community.docker.docker_container:
     name: sample
